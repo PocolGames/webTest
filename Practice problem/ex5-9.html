@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>반응형 메뉴</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #menubar {
+            background: olive;
+            padding: 10px 0;
+        }
+
+        #menubar ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-width: 100%;
+        }
+
+        #menubar ul li {
+            padding: 10px 15px;
+        }
+
+        #menubar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #menubar ul li a:hover {
+            color: violet;
+        }
+
+        /* 모바일 대응 */
+        @media (max-width: 600px) {
+            #menubar ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #menubar ul li {
+                padding: 8px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="menubar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Espresso</a></li>
+            <li><a href="#">Cappuccino</a></li>
+            <li><a href="#">Cafe Latte</a></li>
+            <li><a href="#">F.A.Q</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
