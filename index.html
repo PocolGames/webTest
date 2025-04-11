@@ -1,40 +1,18 @@
-<!DOCTYPE html>
-<html lang="ko">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>홈페이지</title>
-    <style>
-        body { 
-            background-color: linen; 
-            color: blueviolet;
-            text-align: center;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 50px;
-        }
-        h1 {
-            color: darkred;
-        }
-        button {
-            background-color: darkred;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        button:hover {
-            background-color: crimson;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <!-- 결제위젯 SDK 추가 -->
+  <script src="https://js.tosspayments.com/v1/payment-widget"></script>
 </head>
 <body>
-    <h1>Welcome to My Homepage</h1>
-    <p>아래 버튼을 클릭하면 원하는 문서로 이동합니다.</p>
-    <button onclick="location.href='LectureNotes.html'">교수님의 강의 대사 모음집 페이지로 이동</button><br>
-    <button onclick="location.href='example.html'">예제 문서 선택 페이지로 이동</button>
-</body>
-</html>
+  <!-- 결제 UI, 이용약관 UI 영역 -->
+  <div id="payment-method"></div>
+  <div id="agreement"></div>
+  <!-- 할인 쿠폰 -->
+  <div>
+    <input type="checkbox" id="coupon-box" />
+    <label for="coupon-box"> 5,000원 쿠폰 적용 </label>
+  </div>
+  <!-- 결제하기 버튼 -->
+  <button id="payment-button">결제하기</button>
+  <script>
+    const clientKey = "test_gck_docs_Ovk5rk1EwkEbP0W43n07xl
